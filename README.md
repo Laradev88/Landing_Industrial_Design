@@ -1,1 +1,1 @@
-# Landing_Dise-o_Industrial
+# Landing_Diseño_Industrial
