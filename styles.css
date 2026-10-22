@@ -36,8 +36,8 @@ h1 .hero-name-last { color: var(--orange); }
 .discipline-hover { min-height: 63px; padding: 9px 13px; display: inline-flex; align-items: center; gap: 12px; border: 1px solid rgba(37,36,31,.16); border-radius: 5px; background: #fffdf8; color: var(--ink) !important; font: 600 clamp(19px, 2.4vw, 31px)/.96 var(--display); letter-spacing: -1.2px; text-align: left; transform: rotate(2deg); transform-origin: 50% 80%; transition: transform .32s cubic-bezier(.2,.8,.2,1), background .25s, color .25s, box-shadow .25s; }
 .discipline-hover:hover, .discipline-hover:focus-visible { transform: rotate(-4deg) translateY(-6px) scale(1.04); background: var(--orange); color: #fff8f0 !important; box-shadow: 0 12px 24px rgba(193,79,40,.2); outline: none; }
 .discipline-label { color: inherit !important; }
-.discipline-spark { color: var(--orange) !important; font-size: .75em; transition: transform .45s cubic-bezier(.2,.8,.2,1), color .25s; }
-.discipline-hover:hover .discipline-spark, .discipline-hover:focus-visible .discipline-spark { transform: rotate(135deg) scale(1.35); color: #fff8f0 !important; }
+.discipline-spark { width: 17px; height: 17px; flex: 0 0 17px; background: var(--orange); clip-path: polygon(50% 0, 61% 38%, 100% 50%, 61% 62%, 50% 100%, 39% 62%, 0 50%, 39% 38%); transition: transform .45s cubic-bezier(.2,.8,.2,1), background .25s; }
+.discipline-hover:hover .discipline-spark, .discipline-hover:focus-visible .discipline-spark { transform: rotate(135deg) scale(1.35); background: #fff8f0; }
 .hero-role { margin: 18px 0 12px; font: 600 13px var(--display); letter-spacing: .1px; }
 .hero-role span { margin: 0 5px; color: var(--orange); }
 .hero-intro { max-width: 430px; margin-bottom: 29px; color: var(--muted); font-size: 15px; line-height: 1.8; }
@@ -59,7 +59,7 @@ h1 .hero-name-last { color: var(--orange); }
 .object-block { width: 165px; height: 145px; position: absolute; bottom: -8px; left: calc(50% - 82px); border-radius: 82px 82px 0 0; background: var(--orange); box-shadow: inset -16px 0 0 rgba(135,55,28,.12); }
 .object-stem { width: 26px; height: 110px; position: absolute; left: calc(50% - 13px); bottom: 102px; border-radius: 20px; background: #df633a; }
 .visual-tag { position: absolute; left: 25px; bottom: 24px; color: #fff9f1; font: 600 10px/1.5 var(--display); letter-spacing: 1px; }
-.visual-cross { position: absolute; top: 16%; right: 14%; color: white; font-size: 25px; }
+.visual-cross { width: 19px; height: 19px; position: absolute; top: 16%; right: 14%; background: white; clip-path: polygon(50% 0, 61% 38%, 100% 50%, 61% 62%, 50% 100%, 39% 62%, 0 50%, 39% 38%); }
 .visual-coordinate { position: absolute; right: 22px; bottom: 27px; color: rgba(68,48,38,.65); font-size: 8px; letter-spacing: .8px; writing-mode: vertical-rl; }
 .scroll-cue { position: absolute; left: 7.5%; bottom: 25px; display: flex; gap: 10px; align-items: center; color: var(--muted); font-size: 9px; letter-spacing: .4px; }
 .scroll-cue span { width: 26px; height: 1px; background: var(--orange); }
@@ -109,7 +109,7 @@ h2 { margin-bottom: 31px; font-size: clamp(44px, 5vw, 67px); font-weight: 500; l
 .project-year { padding-bottom: 3px; color: var(--muted); font-size: 9px; }
 .project-note { max-width: 360px; margin: 9px 0 0; color: var(--muted); font-size: 10px; line-height: 1.7; }
 .projects-footnote { margin: 32px 0 0; color: var(--muted); font-size: 10px; }
-.projects-footnote span { margin-right: 6px; color: var(--orange); }
+.projects-footnote span { width: 7px; height: 7px; display: inline-block; margin: 0 8px 1px 0; border-radius: 1px; background: var(--orange); transform: rotate(45deg); }
 .cv { background: #fbfaf6; }
 .cv-content { display: grid; grid-template-columns: .9fr 1.1fr; gap: 10%; }
 .cv-title h2 { margin: 0; }
@@ -149,9 +149,9 @@ h2 { margin-bottom: 31px; font-size: clamp(44px, 5vw, 67px); font-weight: 500; l
   .site-header { height: 70px; padding: 0 6%; }
   nav { gap: 17px; font-size: 10px; }
   .nav-contact { padding: 8px 10px; }
-  .hero { min-height: auto; padding: 68px 6% 85px; grid-template-columns: 1fr; gap: 40px; }
+  .hero { min-height: auto; padding: 56px 6% 78px; grid-template-columns: 1fr; gap: 30px; }
   h1 { font-size: clamp(60px, 13vw, 82px); letter-spacing: -4px; }
-  .hero-visual { width: min(100%, 440px); height: 360px; justify-self: center; }
+  .hero-visual { width: min(100%, 440px); height: 330px; justify-self: center; }
   .hero-index { bottom: -54px; }
   .scroll-cue { left: 6%; bottom: 25px; }
   .section { padding: 75px 6%; grid-template-columns: 1fr; gap: 23px; }
@@ -170,8 +170,23 @@ h2 { margin-bottom: 31px; font-size: clamp(44px, 5vw, 67px); font-weight: 500; l
 @media (max-width: 480px) {
   nav { gap: 11px; }
   nav a:first-child { display: none; }
-  .hero-visual { height: 315px; }
-  .section { padding: 64px 6%; }
+  .site-header { height: 62px; }
+  .wordmark { font-size: 18px; }
+  nav { gap: 9px; font-size: 9px; }
+  .nav-contact { padding: 7px 8px; }
+  .hero { padding-top: 48px; gap: 24px; }
+  h1 { font-size: clamp(54px, 15vw, 68px); letter-spacing: -3.5px; line-height: .92; }
+  .hero-name-top { gap: 8px; }
+  .discipline-hover { min-height: 47px; padding: 7px 9px; gap: 7px; border-radius: 4px; font-size: clamp(16px, 4.5vw, 21px); letter-spacing: -.7px; }
+  .discipline-spark { width: 13px; height: 13px; flex-basis: 13px; }
+  .hero-role { margin: 15px 0 9px; font-size: 11px; }
+  .hero-intro { margin-bottom: 22px; font-size: 13px; line-height: 1.7; }
+  .hero-actions { gap: 16px; }
+  .hero-visual { height: 285px; }
+  .object-disc { width: 150px; height: 150px; }
+  .ring-a { width: 290px; height: 155px; }
+  .ring-b { width: 330px; height: 190px; }
+  .section { padding: 54px 6%; gap: 18px; }
   h2 { font-size: 47px; letter-spacing: -2.5px; }
   .project-grid { grid-template-columns: 1fr; gap: 30px; }
   .project-large { grid-row: auto; }
@@ -183,6 +198,8 @@ h2 { margin-bottom: 31px; font-size: clamp(44px, 5vw, 67px); font-weight: 500; l
   .fact-wide strong { font-size: 16px; }
   .email-link { width: 100%; justify-content: space-between; gap: 8px; padding: 12px 13px; }
   .email-address { font-size: clamp(15px, 4vw, 19px); letter-spacing: -.5px; }
+  .contact-orbit { width: 210px; height: 210px; right: -42%; }
+  .orbit-b { width: 290px; height: 290px; right: -54%; }
   .site-footer { grid-template-columns: 1fr; gap: 12px; }
   .site-footer p { grid-column: auto; }
   .site-footer small { text-align: left; }
