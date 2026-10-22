@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f8f6f1" />
+    <meta name="description" content="Grupo 12 — Asiento para fotografía deportiva. Proyecto de Diseño Industrial." />
+    <title>Grupo 12 — Asiento · Fotografía deportiva</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="proyecto.css" />
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.4.0/model-viewer.min.js"></script>
+    <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+    <script defer src="/_vercel/insights/script.js"></script>
+  </head>
+  <body class="project-page">
+    <header class="site-header project-header">
+      <a class="project-wordmark" href="proyecto-grupo-12.html">GRUPO 12 <span>ASIENTO</span></a>
+      <nav aria-label="Navegación del proyecto">
+        <a href="#proyecto">Proyecto</a>
+        <a href="#materialidad">Materialidad</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#muestrario">Muestrario</a>
+        <a class="nav-contact" href="index.html#proyectos">Portfolio <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="project-intro" id="proyecto">
+        <div class="project-intro-copy">
+          <p class="eyebrow"><span class="status-dot"></span> DISEÑO INDUSTRIAL · PROYECTO ACADÉMICO</p>
+          <h1>Grupo 12<br /><span>Asiento.</span></h1>
+          <div class="project-subtitle"><span class="subtitle-rule"></span><p>Fotografía<br />deportiva</p></div>
+        </div>
+        <p class="project-intro-note">Un proyecto en desarrollo.<br />Próximamente, su historia completa.</p>
+      </section>
+
+      <section class="model-stage" aria-label="Vista del producto">
+        <div class="model-stage-top"><span>VISTA DEL PRODUCTO</span><span>MODELO 3D · GIRO 360°</span></div>
+        <div class="model-viewer-wrap">
+          <img class="seat-preview" src="models/asiento-preview.png" alt="Vista previa del asiento del Grupo 12" />
+          <model-viewer class="seat-model" src="models/asiento-grupo-12.glb" alt="Modelo 3D de un asiento para fotografía deportiva, proyecto del Grupo 12" camera-controls auto-rotate auto-rotate-delay="0" rotation-per-second="18deg" camera-orbit="0deg 68deg auto" shadow-intensity="0.8" exposure="1" environment-image="neutral" touch-action="pan-y" interaction-prompt="auto">
+          </model-viewer>
+          <span class="model-loading" aria-live="polite">Cargando modelo 3D…</span>
+          <span class="model-local-notice" aria-live="polite">Vista previa estática. Para girar el modelo, abrí esta página desde Vercel.</span>
+          <span class="model-error-notice" aria-live="polite">No se pudo cargar el modelo 3D. Probá recargar la página.</span>
+          <div class="model-viewer-hint"><span aria-hidden="true">↻</span> Arrastrá para girar · Usá la rueda para acercar</div>
+        </div>
+        <div class="model-stage-bottom"><span>GRUPO 12 — ASIENTO</span><span>DESLIZÁ PARA DESCUBRIR <b>↓</b></span></div>
+      </section>
+
+      <section class="project-section section" id="materialidad">
+        <div class="section-index">01 / MATERIALIDAD</div>
+        <div class="project-section-content">
+          <p class="eyebrow">Materia y decisiones</p>
+          <h2>Materialidad<br /><span>del asiento.</span></h2>
+          <div class="project-copy-grid"><p>En esta sección vamos a contar qué materiales componen el producto y por qué fueron elegidos.</p><div class="content-placeholder"><span>CONTENIDO EN PREPARACIÓN</span><p>Después sumamos acá tus textos y detalles de materialidad.</p></div></div>
+        </div>
+      </section>
+
+      <section class="project-section section process-section" id="proceso">
+        <div class="section-index">02 / PROCESO PRODUCTIVO</div>
+        <div class="project-section-content">
+          <p class="eyebrow">De la idea al objeto</p>
+          <h2>Proceso<br /><span>productivo.</span></h2>
+          <div class="process-placeholder"><div class="process-step"><span>01</span><b>Diseño</b><i></i></div><div class="process-step"><span>02</span><b>Fabricación</b><i></i></div><div class="process-step"><span>03</span><b>Ensamble</b><i></i></div><p>Etapas por completar con la información del proyecto.</p></div>
+        </div>
+      </section>
+
+      <section class="project-section section materials-section" id="muestrario">
+        <div class="section-index">03 / MUESTRARIO</div>
+        <div class="project-section-content">
+          <p class="eyebrow">Texturas, colores y acabados</p>
+          <h2>Muestrario<br /><span>de materiales.</span></h2>
+          <div class="material-grid">
+            <div class="material-sample sample-orange"><span>01</span><b>Foto de material</b></div>
+            <div class="material-sample sample-sand"><span>02</span><b>Foto de material</b></div>
+            <div class="material-sample sample-peach"><span>03</span><b>Foto de material</b></div>
+          </div>
+          <p class="sample-caption">Los espacios se reemplazan por las fotos, nombres y descripciones que me compartas.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="project-footer"><a class="project-wordmark" href="#proyecto">GRUPO 12 <span>ASIENTO</span></a><p>Fotografía deportiva · Diseño Industrial</p><a href="index.html#proyectos">Volver al portfolio <span aria-hidden="true">↗</span></a></footer>
+    <script>
+      const modelStage = document.querySelector('.model-viewer-wrap');
+      const seatModel = document.querySelector('.seat-model');
+      seatModel.addEventListener('load', () => modelStage.classList.add('is-loaded'));
+      seatModel.addEventListener('error', () => modelStage.classList.add('has-error'));
+      if (window.location.protocol === 'file:') modelStage.classList.add('local-file');
+    </script>
+  </body>
+</html>
