@@ -21,11 +21,13 @@
 .model-viewer-wrap.is-loaded .seat-model { opacity: 1; }
 .model-viewer-wrap.is-loaded .seat-preview { opacity: 0; }
 .model-loading, .model-local-notice, .model-error-notice { position: absolute; z-index: 3; top: 14px; left: 15px; padding: 10px 14px; border-radius: 30px; background: rgba(255,253,248,.94); color: var(--muted); font-size: 11px; }
+.model-loading { display: none; }
 .model-local-notice, .model-error-notice { display: none; }
-.model-viewer-wrap.local-file .model-loading, .model-viewer-wrap.has-error .model-loading, .model-viewer-wrap.is-loaded .model-loading { display: none; }
-.model-viewer-wrap.local-file .model-local-notice, .model-viewer-wrap.has-error .model-error-notice { display: block; }
-.model-viewer-hint { position: absolute; right: 20px; bottom: 18px; z-index: 3; padding: 9px 12px; display: flex; align-items: center; gap: 8px; border: 1px solid rgba(37,36,31,.1); border-radius: 30px; background: rgba(255,253,248,.88); color: var(--muted); font-size: 9px; opacity: 0; transition: opacity .3s ease; pointer-events: none; }
-.model-viewer-wrap.is-loaded .model-viewer-hint { opacity: 1; }
+.model-viewer-wrap.loading .model-loading { display: block; }
+.model-viewer-wrap.local-file .model-local-notice, .model-viewer-wrap.has-error:not(.is-loaded) .model-error-notice { display: block; }
+.model-viewer-wrap.is-loaded .model-loading, .model-viewer-wrap.local-file .model-viewer-hint, .model-viewer-wrap.has-error:not(.is-loaded) .model-viewer-hint { display: none; }
+.model-viewer-wrap:not(.is-loaded) .hint-model, .model-viewer-wrap.is-loaded .hint-poster { display: none; }
+.model-viewer-hint { position: absolute; right: 20px; bottom: 18px; z-index: 3; padding: 9px 12px; display: flex; align-items: center; gap: 8px; border: 1px solid rgba(37,36,31,.1); border-radius: 30px; background: rgba(255,253,248,.88); color: var(--muted); font-size: 9px; transition: opacity .3s ease; pointer-events: none; }
 .model-viewer-hint span { color: var(--orange); font-size: 16px; }
 .project-section.section { padding-top: 95px; padding-bottom: 105px; }
 .project-section-content { min-width: 0; max-width: 1000px; }.project-section-content h2 { margin: 0 0 36px; }
