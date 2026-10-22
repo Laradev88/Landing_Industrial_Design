@@ -1,4 +1,4 @@
-# Portfolio de Gala De Vincenti
+# Portfolio de Gala Devincenti
 
 Landing estática en HTML y CSS, pensada como portfolio de una estudiante de tercer año de Diseño Industrial. No necesita instalar dependencias ni configurar un proceso de compilación.
 
