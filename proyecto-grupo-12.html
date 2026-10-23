@@ -95,7 +95,26 @@
     <script>
       document.querySelectorAll('.model-viewer-wrap').forEach((modelStage) => {
         const seatModel = modelStage.querySelector('.seat-model');
-        seatModel.addEventListener('load', () => modelStage.classList.add('is-loaded'));
+        seatModel.addEventListener('load', () => {
+          modelStage.classList.add('is-loaded');
+
+          // Keep the metal neutral gray and lift the seat surface slightly so its existing edge lines read better.
+          const materials = seatModel.model?.materials ?? [];
+          const tubeMaterial = materials.find((material) => /aluminum/i.test(material.name));
+          const seatSurfaceMaterial = materials.find((material) => /nylon 12/i.test(material.name));
+
+          if (tubeMaterial) {
+            tubeMaterial.pbrMetallicRoughness.setBaseColorFactor('#777a7d');
+            tubeMaterial.pbrMetallicRoughness.setMetallicFactor(0.42);
+            tubeMaterial.pbrMetallicRoughness.setRoughnessFactor(0.42);
+          }
+
+          if (seatSurfaceMaterial) {
+            seatSurfaceMaterial.pbrMetallicRoughness.setBaseColorFactor('#383735');
+            seatSurfaceMaterial.pbrMetallicRoughness.setMetallicFactor(0.02);
+            seatSurfaceMaterial.pbrMetallicRoughness.setRoughnessFactor(0.72);
+          }
+        });
         seatModel.addEventListener('error', () => modelStage.classList.add('has-error'));
         seatModel.addEventListener('progress', () => modelStage.classList.add('loading'));
         seatModel.addEventListener('poster-dismissed', () => modelStage.classList.add('loading'));
