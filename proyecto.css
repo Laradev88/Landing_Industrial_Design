@@ -19,7 +19,6 @@
 .model-card-label { min-height: 46px; padding: 0 2px 10px; display: flex; align-items: center; gap: 9px; }
 .model-card-label > span:first-child { color: var(--orange); font: 600 10px var(--display); }
 .model-card-label h2 { margin: 0; font: 600 16px var(--display); letter-spacing: -.4px; }
-.model-card-label > span:last-child { margin-left: auto; color: var(--muted); font-size: 7px; font-weight: 600; letter-spacing: 1px; }
 .model-viewer-wrap, .model-pending-view { height: clamp(420px, 56vw, 670px); position: relative; overflow: hidden; background-color: #f1eee7; background-image: linear-gradient(rgba(255,255,255,.55) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.55) 1px, transparent 1px); background-size: 34px 34px; }
 .model-viewer-wrap::before, .model-pending-view::before { content: ''; width: min(30vw, 390px); aspect-ratio: 1; position: absolute; left: 50%; top: 50%; border: 1px solid rgba(242,101,53,.16); border-radius: 50%; transform: translate(-50%, -50%); pointer-events: none; }
 .model-pending-view { display: grid; place-items: center; align-content: center; gap: 18px; border: 1px solid rgba(37,36,31,.06); }
