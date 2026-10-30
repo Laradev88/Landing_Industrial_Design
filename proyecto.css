@@ -54,3 +54,27 @@
   .model-pending-view { min-height: 260px; height: 260px; }
   .model-stage-top span:last-child { text-align: right; }
 }
+
+/* Estructura y procesos de fabricación */
+.project-section-content h3 { margin: 0; font: 600 21px/1.25 var(--display); letter-spacing: -.5px; color: var(--ink); text-wrap: balance; }
+.project-section-content p strong { color: var(--ink); font-weight: 600; }
+.spec-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 56px; }
+.spec-item { min-width: 0; padding: 26px 0 30px; border-top: 1px solid var(--line); }
+.spec-item h3 { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.spec-item h3::before { content: ''; width: 8px; height: 8px; flex: none; border-radius: 50%; background: var(--orange); }
+.spec-item p, .process-text p { margin: 0; max-width: 62ch; color: #4b4a44; font-size: 17px; line-height: 1.75; }
+.process-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid #ddd6c9; }
+.process-item { padding: 32px 0 34px; display: grid; grid-template-columns: 64px minmax(0, .8fr) minmax(0, 1.6fr); gap: 0 32px; align-items: start; border-bottom: 1px solid #ddd6c9; }
+.process-num { padding-top: 3px; color: var(--orange); font: 600 15px var(--display); letter-spacing: .5px; }
+.process-text { display: grid; gap: 16px; }
+@media (max-width: 960px) {
+  .process-item { grid-template-columns: 52px minmax(0, 1fr); gap: 12px 18px; }
+  .process-text { grid-column: 2; }
+}
+@media (max-width: 760px) {
+  .spec-grid { grid-template-columns: 1fr; }
+  .spec-item { padding: 22px 0 24px; }
+  .spec-item p, .process-text p { font-size: 16px; line-height: 1.7; }
+  .project-section-content h3 { font-size: 19px; }
+  .process-item { grid-template-columns: 40px minmax(0, 1fr); padding: 24px 0 26px; }
+}
